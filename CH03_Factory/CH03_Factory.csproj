@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1781C5AE-15DE-4259-BF86-336C170F6BAA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CH03_Factory</RootNamespace>
+    <AssemblyName>CH03_Factory</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\CheesePizza.cs" />
+    <Compile Include="Classes\ClamPizza.cs" />
+    <Compile Include="Classes\Ingredients\FreshClams.cs" />
+    <Compile Include="Classes\Ingredients\Garlic.cs" />
+    <Compile Include="Classes\Ingredients\MarinaraSauce.cs" />
+    <Compile Include="Classes\Ingredients\Mushroom.cs" />
+    <Compile Include="Classes\Ingredients\Onion.cs" />
+    <Compile Include="Classes\Ingredients\RedPepper.cs" />
+    <Compile Include="Classes\Ingredients\ReggianoCheese.cs" />
+    <Compile Include="Classes\Ingredients\SlicedPepperoni.cs" />
+    <Compile Include="Classes\Ingredients\ThinCrustDough.cs" />
+    <Compile Include="Classes\PepperoniPizza.cs" />
+    <Compile Include="Classes\Pizza.cs" />
+    <Compile Include="Classes\NYPizzaStore.cs" />
+    <Compile Include="Classes\PizzaStore.cs" />
+    <Compile Include="Classes\VeggiePizza.cs" />
+    <Compile Include="Factories\NYPizzaIngredientsFactory.cs" />
+    <Compile Include="Interfaces\IPizza.cs" />
+    <Compile Include="Interfaces\IPizzaIgredientFactory.cs" />
+    <Compile Include="Interfaces\ICheese.cs" />
+    <Compile Include="Interfaces\IClams.cs" />
+    <Compile Include="Interfaces\IDough.cs" />
+    <Compile Include="Interfaces\IPepperoni.cs" />
+    <Compile Include="Interfaces\IPizzaStore.cs" />
+    <Compile Include="Interfaces\ISauce.cs" />
+    <Compile Include="Interfaces\IVeggies.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
